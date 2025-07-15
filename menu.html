@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="slogo2.png" type="image/x-icon">
+    <title>Food Menu - Our Restaurant</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(129, 155, 153);
+        }
+
+        .menu-section {
+            background: linear-gradient(rgba(129, 155, 153, 0.95), rgba(147, 142, 142, 0.88)),
+                url('menu-background.jpg') center/cover no-repeat;
+            padding: 50px 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            color: black;
+            margin: 20px 0;
+        }
+
+        .category {
+            margin: 40px auto;
+            width: 85%;
+            border: 2px solid #e36414;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.95);
+            transition: transform 0.3s;
+        }
+
+        .category:hover {
+            transform: scale(1.02);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 15px 20px;
+            font-size: 18px;
+            color: #333;
+            transition: background 0.3s;
+        }
+
+        tr:hover td {
+            background: #f5f5f5;
+        }
+
+        .item-name {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .item-price {
+            text-align: right;
+            color: #e36414;
+        }
+
+        .food-img {
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+            max-width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+
+            <div class="headerbar">
+                <div class="account">
+                    <ul>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-user" id="user-mb"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="menu.html">
+                            <li>Food Menu</li>
+                        </a>
+                        <a href="">
+                            <li>Book Table</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="wlogo.png" alt="" height="62" weidth="200">
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="menu.html">
+                        <li>Food Menu</li>
+                    </a>
+                    <a href="#">
+                        <li>Book Table</li>
+                    </a>
+
+                </ul>
+            </div>
+            <div class="account">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                        </li>
+                    </a>
+                    <div class="search" id="searchinput2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-user" id="user-lap"></i>
+                        </li>
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-section">
+        <h1>Evergreen Haven Complete Menu</h1>
+
+        <!-- Veg Section -->
+        <h2>Vegetarian Menu</h2>
+
+        <div class="category">
+            <h3>Indian</h3>
+            <table>
+                <tr>
+                    <td class="item-name">Paneer Butter Masala</td>
+                    <td class="item-price">₹140</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Dal Tadka</td>
+                    <td class="item-price">₹100</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Aloo Gobi</td>
+                    <td class="item-price">₹90</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Kadhai Paneer</td>
+                    <td class="item-price">₹150</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Baingan Bharta</td>
+                    <td class="item-price">₹95</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Matar Paneer</td>
+                    <td class="item-price">₹130</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Mix Veg Curry</td>
+                    <td class="item-price">₹110</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Chole Bhature</td>
+                    <td class="item-price">₹100</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Rajma Chawal</td>
+                    <td class="item-price">₹90</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Bhindi Masala</td>
+                    <td class="item-price">₹90</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Stuffed Kulcha</td>
+                    <td class="item-price">₹80</td>
+                </tr>
+            </table>
+            <img src=".img" alt="food-img-1" class="food-img">
+        </div>
+
+        <div class="category" style="
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+              url('samosa1.png') center 65px no-repeat;
+  background-size: 350px auto;
+  width: 85%;
+  transition: transform 0.3s;
+">
+            <h3 style="text-align:center; color:black;">Chinese</h3>
+            <table>
+                <tr>
+                    <td class="item-name">Veg Hakka Noodles</td>
+                    <td class="item-price">₹120</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Chilli Paneer</td>
+                    <td class="item-price">₹130</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Spring Rolls</td>
+                    <td class="item-price">₹100</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Veg Manchurian</td>
+                    <td class="item-price">₹125</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Schezwan Fried Rice</td>
+                    <td class="item-price">₹110</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Chowmein</td>
+                    <td class="item-price">₹115</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Veg Momos (8pcs)</td>
+                    <td class="item-price">₹90</td>
+                </tr>
+            </table>
+            <img src="food-img-2.jpg" alt="food-img-2" class="food-img">
+        </div>
+
+        <div class="category" style="
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+              url('samosa1.png') center 65px no-repeat;
+  background-size: 350px auto;
+  width: 85%;
+  transition: transform 0.3s;
+">
+
+            <h3 style="text-align:center; color:black;">Snacks & Sweets</h3>
+            <table style="width:100%; border-collapse:collapse; background: rgba(255,255,255,0.7); border-radius:15px;">
+                <tr>
+                    <td class="item-name" style="padding:15px;">Samosa</td>
+                    <td class="item-price" style="padding:15px; color:#e36414;">₹25</td>
+                </tr>
+                <tr>
+                    <td class="item-name" style="padding:15px;">Pav Bhaji</td>
+                    <td class="item-price" style="padding:15px; color:#e36414;">₹85</td>
+                </tr>
+                <tr>
+                    <td class="item-name" style="padding:15px;">Gulab Jamun</td>
+                    <td class="item-price" style="padding:15px; color:#e36414;">₹50</td>
+                </tr>
+                <tr>
+                    <td class="item-name" style="padding:15px;">Rasgulla</td>
+                    <td class="item-price" style="padding:15px; color:#e36414;">₹45</td>
+                </tr>
+                <tr>
+                    <td class="item-name" style="padding:15px;">Kachori</td>
+                    <td class="item-price" style="padding:15px; color:#e36414;">₹40</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <!-- Add 2-3 more Veg categories -->
+        <div class="category">
+            <h3>South Indian</h3>
+            <table>
+                <tr>
+                    <td class="item-name">Masala Dosa</td>
+                    <td class="item-price">₹90</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Idli Sambar</td>
+                    <td class="item-price">₹70</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Vada Sambar</td>
+                    <td class="item-price">₹75</td>
+                </tr>
+            </table>
+            <img src="food-img-4.jpg" alt="food-img-4" class="food-img">
+        </div>
+
+        <div class="category">
+            <h3>Street Food</h3>
+            <table>
+                <tr>
+                    <td class="item-name">Pani Puri</td>
+                    <td class="item-price">₹40</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Bhel Puri</td>
+                    <td class="item-price">₹50</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Dabeli</td>
+                    <td class="item-price">₹45</td>
+                </tr>
+            </table>
+            <img src="food-img-5.jpg" alt="food-img-5" class="food-img">
+        </div>
+
+        <!-- Non-Veg Section -->
+        <h2>Non-Vegetarian Menu</h2>
+
+        <div class="category">
+            <h3>Indian</h3>
+            <table>
+                <tr>
+                    <td class="item-name">Butter Chicken</td>
+                    <td class="item-price">₹200</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Chicken Curry</td>
+                    <td class="item-price">₹180</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Mutton Rogan Josh</td>
+                    <td class="item-price">₹260</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Egg Curry</td>
+                    <td class="item-price">₹120</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Tandoori Chicken</td>
+                    <td class="item-price">₹220</td>
+                </tr>
+            </table>
+            <img src="food-img-6.jpg" alt="food-img-6" class="food-img">
+        </div>
+
+        <div class="category">
+            <h3>Chinese</h3>
+            <table>
+                <tr>
+                    <td class="item-name">Chicken Hakka Noodles</td>
+                    <td class="item-price">₹150</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Chicken Manchurian</td>
+                    <td class="item-price">₹160</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Chilli Chicken</td>
+                    <td class="item-price">₹170</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Chicken Spring Rolls</td>
+                    <td class="item-price">₹140</td>
+                </tr>
+            </table>
+            <img src="food-img-7.jpg" alt="food-img-7" class="food-img">
+        </div>
+
+        <div class="category">
+            <h3>BBQ & Grilled</h3>
+            <table>
+                <tr>
+                    <td class="item-name">BBQ Chicken Wings</td>
+                    <td class="item-price">₹200</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Grilled Chicken Breast</td>
+                    <td class="item-price">₹210</td>
+                </tr>
+                <tr>
+                    <td class="item-name">BBQ Mutton Skewers</td>
+                    <td class="item-price">₹260</td>
+                </tr>
+            </table>
+            <img src="food-img-8.jpg" alt="food-img-8" class="food-img">
+        </div>
+
+        <div class="category">
+            <h3>Seafood</h3>
+            <table>
+                <tr>
+                    <td class="item-name">Fish Curry</td>
+                    <td class="item-price">₹230</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Prawn Masala</td>
+                    <td class="item-price">₹280</td>
+                </tr>
+                <tr>
+                    <td class="item-name">Fried Pomfret</td>
+                    <td class="item-price">₹270</td>
+                </tr>
+            </table>
+            <img src="food-img-9.jpg" alt="food-img-9" class="food-img">
+        </div>
+    </div>
+</body>
+
+</html>

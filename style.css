@@ -461,7 +461,7 @@
 }
 
 .footer{
-    padding: 60px 0;
+    padding: 20px 0 0 2px;
     border-top: 2px solid rgb(252,184,107);
     background-color: rgb(252,222,195);
     display: flex;
